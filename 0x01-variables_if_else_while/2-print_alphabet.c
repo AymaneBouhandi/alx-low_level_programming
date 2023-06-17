@@ -10,12 +10,12 @@
 
 int main(void)
 {
-	char ch = 'a';
+	int n = 97;
 
-	while (ch <= '2')
+	while (n <= 122)
 	{
-		putchar(ch);
-		ch++;
+		putchar(n);
+		n++;
 	}
 	putchar('\n');
 
