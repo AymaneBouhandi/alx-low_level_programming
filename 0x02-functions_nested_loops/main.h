@@ -25,5 +25,7 @@ void times_table(void);
 
 int add(int, int);
 
+void print_to98(int n);
+
 
 #endif
