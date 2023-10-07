@@ -18,13 +18,13 @@ int _strlen(char *s)
 }
 
 /**
- * create_file - function that creates a file
+ * append_text_to_file - a function that appends text at the end of a file
  * @filename: file name
  * @text_content: content to write
  * Return: 1 success, -1 failure
 */
 
-int create_file(const char *filename, char *text_content)
+int append_text_to_file(const char *filename, char *text_content)
 {
 	int fDesc;
 	ssize_t byte = 0, length = _strlen(text_content);
@@ -32,7 +32,7 @@ int create_file(const char *filename, char *text_content)
 	if (!filename)
 		return (-1);
 
-	fDesc = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
+	fDesc = open(filename, O_WRONLY | O_APPEND);
 
 	if (fDesc == -1)
 		return (-1);
